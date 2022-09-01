@@ -1,0 +1,18 @@
+<%= form_with url: "/main/post", method: :post, data: {turbo: false} do |form| %>
+  <%= form.label :subject1, "subject" %>
+  <%= form.text_field :subject1 %>
+  <%= form.label :score1, "score" %>
+  <%= form.number_field :score1, in: 0.0..100.0, step: 0.1 %>
+  <br>
+  <%= form.label :subject2, "subject" %>
+  <%= form.text_field :subject2 %>
+  <%= form.label :score2, "score" %>
+  <%= form.number_field :score2, in: 0.0..100.0, step: 0.1 %>
+  <br>
+  <%= form.label :subject3, "subject" %>
+  <%= form.text_field :subject3 %>
+  <%= form.label :score3, "score" %>
+  <%= form.number_field :score3, in: 0.0..100.0, step: 0.1 %>
+  <br>
+  <%= form.submit "Calculate" %>
+<% end %>
